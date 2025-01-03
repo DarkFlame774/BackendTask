@@ -39,15 +39,15 @@ export const sortfetch = async(req,res)=>{
     
     const query = {
         $or: [
-        {content:  {$not: /.*\bai\b.*/i}},  
-        {content:  {$not: /^ai$/i }},
-        {content:  {$not: /ai$/i }},
+        {content:  {$not: /.*\bai\b.*/}},  
+        {content:  {$not: /^ai$/ }},
+        {content:  {$not: /ai$/}},
     ]}
     const query1 = {
         $or: [
-        {content:  /.*\bai\b.*/i},  
-        {content:  /^ai$/i },
-        {content:  /ai$/i },
+        {content:  /.*\bai\b.*/},  
+        {content:  /^ai$/ },
+        {content:  /ai$/ },
     ]
 };
     const projection ={
